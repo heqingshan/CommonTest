@@ -1,0 +1,27 @@
+
+Icon设置：
+
+iphone版本
+29、58；57、114；80；120
+
+ipad版本
+29、58；40、80；50、100；72、144
+
+
+LaunchImage设置：
+
+iphone版本
+320x480、640x960（IOS5、6）；640x1136（IOS7）
+
+ipad版本
+纵向
+1536 x 2008 pixels
+768 x 1004 pixels (标准分辨率)
+横向:
+2048 x 1496 pixels
+1024 x 748 pixels (标准分辨率)
+
+注意事项：
+1、iphone没有横屏启动图
+2、尽可能使用Images.xcassets.如果没有Icon货LaunchImage，可以新建
+3、拖进去即可，不需要再导入到工程中，因为Images.xcassets已经进行了一次复制

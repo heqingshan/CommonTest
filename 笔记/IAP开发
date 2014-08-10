@@ -1,0 +1,53 @@
+
+
+分为两种方式：
+
+ 一. 内置产品类型
+ 
+ 1. 程序通过bundle存储的plist文件得到产品标识符的列表。
+ 2. 程序向App Store发送请求，得到产品的信息。
+ 3. App Store返回产品信息。
+ 4. 程序把返回的产品信息显示给用户（App的store界面）
+ 5. 用户选择某个产品
+ 6. 程序向App Store发送支付请求
+ 7. App Store处理支付请求并返回交易完成信息。
+ 8. App获取信息并提供内容给用户。
+ 
+ 
+ 二. 服务器类型
+ 
+ 1. 程序向服务器发送请求，获得一份产品列表。
+ 2. 服务器返回包含产品标识符的列表。
+ 3. 程序向App Store发送请求，得到产品的信息。
+ 4. App Store返回产品信息。
+ 5. 程序把返回的产品信息显示给用户（App的store界面）
+ 6. 用户选择某个产品
+ 7. 程序向App Store发送支付请求
+ 8. App Store处理支付请求并返回交易完成信息。
+ 9. 程序从信息中获得数据，并发送至服务器。
+ 10. 服务器纪录数据，并进行审(我们的)查。
+ 11. 服务器将数据发给App Store来验证该交易的有效性。
+ 12. App Store对收到的数据进行解析，返回该数据和说明其是否有效的标识。
+ 13. 服务器读取返回的数据，确定用户购买的内容。
+ 14. 服务器将购买的内容传递给程序。
+
+
+Apple ID注册
+1.登陆Apple开发者帐号
+2.创建一个新的Apple ID或是选用一个已存在的Apple ID，确定Apple ID的In App Purchase功能可使用
+3.创建develop（用于沙盒测试）和distribution（用于发布）的profile，创建时选择刚才创建的Apple ID。
+4.登陆itunes connect，创建一个新的App或选用一个已存在的App，App的Bundle ID要使用步骤2中选用的App Id（注：Bundle ID只能在App创建时指定，且App创建后不能不能被修改）
+5. 进入App Information页面，点击“Manage In-App Purchases”按钮，进入 In-App Purchases管理页面。点击“Create New”按钮开始创建一个新的Iap产品
+
+随后可以进行开发。
+
+注意事项：
+1、需要填写完整银行信息，确保审核通过
+2、需要添加测试用户
+3、如果是第一次，则还需要先上传二进制文件，才可以正常使用。并且需要上传之后再添加产品。
+
+ 
+环境配置
+a、导入StoreKit.framework、libz.1.2.5.dylib、
+b、依赖于SBJson、Base64和ASIHttpRequest等文件
+
